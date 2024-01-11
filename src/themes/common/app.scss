@@ -1,0 +1,331 @@
+#app {
+  font-family: PingFangSC-Medium, PingFangSC-Regular, Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: auto;
+  height: 100%;
+  background: #262932;
+
+  ::-webkit-scrollbar {
+    display: none !important; /* Chrome Safari */
+  }
+}
+
+@media screen and (max-width: 1900px) {
+  html,
+  body {
+    zoom: 0.9;
+    .activity-pop-ups {
+      zoom: 1.2 !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1359px) {
+  html,
+  body {
+    zoom: 0.83;
+    .activity-pop-ups {
+      zoom: 1.4 !important;
+    }
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  background-color: #000;
+
+  -webkit-user-select: none;
+
+  -moz-user-select: none;
+
+  -ms-user-select: none;
+
+  user-select: none;
+
+  scrollbar-width: none !important;
+
+  ::-webkit-scrollbar {
+    display: none !important; /* Chrome Safari */
+  }
+}
+
+.filter-card-pop {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #00000030;
+  top: 0;
+  left: 0;
+  z-index: 300;
+}
+
+.filter-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  width: 100%;
+  & > div {
+    display: flex;
+    align-items: center;
+  }
+  .filter-bar {
+    height: 32px;
+    line-height: 32px;
+    padding: 0 30px;
+    font-family: PingFangSC-Medium;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 16px;
+    background-color: var(--aux-color);
+    margin-right: 16px;
+    cursor: pointer;
+    position: relative;
+    .filter-card {
+      position: absolute;
+      width: 330px;
+      background: #363841;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      right: 0;
+      top: 68px;
+      z-index: 305;
+      padding: 26px;
+      .filter-card-title {
+        font-family: PingFangSC-Medium;
+        font-size: 16px;
+        color: #ffffff;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .filter-card-radio-group {
+        width: 100%;
+        .el-radio {
+          font-family: PingFangSC-Regular, cursive;
+          margin-right: 0;
+          margin-bottom: 16px;
+          width: 33%;
+          flex-shrink: 0;
+          --el-radio-font-size: 14px;
+          --el-radio-input-border-color-hover: var(--aux-color);
+          --el-radio-input-bg-color: #00000000;
+          --el-radio-input-height: 18px;
+          --el-radio-input-width: 18px;
+          --el-radio-text-color: #c2c7d2;
+          .is-checked {
+            .el-radio__inner {
+              border-color: var(--aux-color);
+              background: #363841;
+            }
+            .el-radio__inner::after {
+              height: 10px;
+              width: 10px;
+              background-color: var(--aux-color);
+            }
+          }
+          .el-radio__input.is-checked + .el-radio__label {
+            color: #c2c7d2;
+          }
+        }
+      }
+      .control-bar {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+        div {
+          width: 140px;
+          height: 28px;
+          line-height: 28px;
+          text-align: center;
+          cursor: pointer;
+          &:nth-child(1) {
+            background: var(--aux-color);
+            border-radius: 4px;
+            &:hover {
+              box-shadow: 12px 12px 24px #ffffff20 inset;
+            }
+            &:active {
+              box-shadow: 12px 12px 24px #ffffff40 inset;
+            }
+          }
+        }
+      }
+    }
+  }
+  .time-bar-box {
+    display: flex;
+    background: #2a2c33;
+    border-radius: 30px;
+    .active-bar {
+      background: #ffffff;
+      color: #000000 !important;
+    }
+    .time-bar {
+      //background: #ffffff;
+      border-radius: 30px;
+      height: 28px;
+      padding: 0 16px;
+      line-height: 28px;
+      margin: 10px;
+      font-family: PingFangSC-Regular, cursive;
+      font-size: 18px;
+      color: #c2c7d2;
+      font-weight: 400;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.2s linear;
+      & + .time-bar {
+        &:after {
+          position: absolute;
+          content: '';
+          width: 1px;
+          height: 16px;
+          background-color: #ffffff20;
+          left: -9.5px;
+          top: 6px;
+        }
+      }
+    }
+  }
+}
+
+.has-date {
+  position: relative;
+  .el-date-editor {
+    height: 44px !important;
+    width: 330px !important;
+    background: #2a2c33;
+    border-radius: 30px;
+    box-shadow: none !important;
+    justify-content: flex-start !important;
+    .el-range__icon {
+      display: none;
+    }
+    .el-range-separator {
+      color: #ffffff;
+      flex: 0;
+      width: 28px;
+    }
+    input::-webkit-input-placeholder {
+      font-family: PingFangSC-Regular, cursive;
+      font-size: 16px;
+      color: #535865;
+      text-align: left;
+      font-weight: 400;
+    }
+    .el-range-input {
+      width: 120px;
+      color: var(--aux-color);
+      font-family: DIN-Medium, cursive;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+  .reset-btn {
+    position: absolute;
+    height: 28px;
+    width: 49px;
+    background: #ffffff;
+    border-radius: 30px;
+    top: 10px;
+    right: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.el-image__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-bank-radio-group {
+  width: 100%;
+  .el-radio {
+    font-family: PingFangSC-Regular, cursive;
+    margin-right: 0;
+    margin-bottom: 16px;
+    width: 24.5%;
+    flex-shrink: 0;
+    --el-radio-font-size: 14px;
+    --el-radio-input-border-color-hover: var(--aux-color);
+    --el-radio-input-bg-color: #00000000;
+    --el-radio-input-height: 18px;
+    --el-radio-input-width: 18px;
+    --el-radio-text-color: #c2c7d2;
+    .el-radio__label {
+      font-family: PingFangSC-Regular, cursive;
+      font-size: 18px;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+    }
+    .is-checked {
+      .el-radio__inner {
+        border-color: var(--aux-color);
+        background: #363841;
+      }
+      .el-radio__inner::after {
+        height: 10px;
+        width: 10px;
+        background-color: var(--aux-color);
+      }
+    }
+    .el-radio__input.is-checked + .el-radio__label {
+      color: #ffffff;
+    }
+  }
+}
+.select-province-radio-group {
+  .el-radio {
+    width: 16.5%;
+  }
+}
+
+.change-bank-radio-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+  .tag-image {
+    background: #ffffff;
+    border-radius: 50%;
+    margin: 0 14px;
+  }
+  .usdt-image {
+    background: #ffffff00;
+  }
+  .el-radio {
+    .el-radio__label {
+      font-size: 14px;
+    }
+  }
+  .pl {
+    margin-left: 16px;
+  }
+}
+
+.normal-text {
+  font-family: PingFangSC-Medium;
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.weight-text {
+  font-family: DIN-Medium, cursive;
+  font-size: 36px;
+  color: #ee9e01;
+  font-weight: 600;
+}

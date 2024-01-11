@@ -1,0 +1,15 @@
+$--component-bg: #17191e;
+$--main-bg: #262932;
+$--aux-color: #ee9e01;
+$--component-attached-bg: #343a43;
+$--component-pop-ups-bg: #363841;
+$--chinese-red: #ea3d3d;
+
+:root {
+  --component-bg: #{$--component-bg};
+  --main-bg: #{$--main-bg};
+  --aux-color: #{$--aux-color};
+  --component-attached-bg: #{$--component-attached-bg};
+  --component-pop-ups-bg: #{$--component-pop-ups-bg};
+  --chinese-red: #{$--chinese-red};
+}

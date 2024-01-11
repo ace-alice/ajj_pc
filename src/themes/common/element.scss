@@ -1,0 +1,349 @@
+.el-picker__popper {
+  background: #363841 !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px !important;
+  .el-popper__arrow::before {
+    background-color: #363841 !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  }
+  .el-date-picker__header-label {
+    color: #ffffff;
+  }
+  .el-date-table th {
+    border-bottom: solid 1px #ffffff10;
+  }
+  .el-date-table__row {
+    border-radius: 19px;
+  }
+
+  .el-date-picker {
+    --el-datepicker-hover-text-color: #ffffff;
+    --el-datepicker-header-text-color: #ffffff;
+    --el-datepicker-text-color: #ffffff;
+    --el-datepicker-active-color: #ffffff;
+    --el-datepicker-icon-color: #ffffff;
+    --el-datepicker-off-text-color: #ffffff20;
+  }
+
+  .el-date-range-picker {
+    --el-datepicker-inrange-bg-color: #ee9e0120;
+    --el-datepicker-active-color: #00000000;
+    --el-datepicker-off-text-color: #ffffff20;
+    --el-datepicker-hover-text-color: #ffffff;
+    --el-datepicker-inrange-hover-bg-color: #ee9e0140;
+    --el-datepicker-icon-color: #ffffff;
+    --el-datepicker-header-text-color: #ffffff;
+    --el-datepicker-inner-border-color: #00000000;
+    .disabled {
+      .el-date-table-cell {
+        background-color: #00000010 !important;
+      }
+    }
+  }
+
+  .el-picker-panel {
+    background-color: unset;
+    color: #ffffff;
+    .today {
+      .el-date-table-cell__text {
+        color: var(--aux-color);
+      }
+    }
+    .el-date-table-cell__text {
+      font-size: 14px;
+    }
+    .current {
+      .el-date-table-cell__text {
+        border: 1px solid var(--aux-color);
+        background: #00000030;
+      }
+      &:not(.disabled) {
+        .el-date-table-cell__text {
+          border: 1px solid var(--aux-color);
+          background: #00000020;
+        }
+      }
+    }
+  }
+}
+.wallet-2-radio-group {
+  .el-radio {
+    width: 49% !important;
+    --el-radio-font-size: 16px !important;
+  }
+}
+.wallet-radio-group {
+  width: 100%;
+  .el-radio {
+    font-family: PingFangSC-Regular, cursive;
+    margin-right: 0;
+    margin-bottom: 16px;
+    width: 33%;
+    flex-shrink: 0;
+    --el-radio-font-size: 14px;
+    --el-radio-input-border-color-hover: var(--aux-color);
+    --el-radio-input-bg-color: #00000000;
+    --el-radio-input-height: 18px;
+    --el-radio-input-width: 18px;
+    --el-radio-text-color: #c2c7d2;
+    .el-radio__input {
+      margin: 0 12px;
+    }
+    .is-checked {
+      color: #ffffff;
+      .el-radio__inner {
+        border-color: var(--aux-color);
+        background: #363841;
+      }
+      .el-radio__inner::after {
+        height: 10px;
+        width: 10px;
+        background-color: var(--aux-color);
+      }
+    }
+    .el-radio__input.is-checked + .el-radio__label {
+      color: #ffffff;
+    }
+  }
+}
+.el-select__popper.el-popper {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  .el-popper__arrow {
+    display: none !important;
+  }
+  transition: none;
+}
+.venue-select {
+  .box {
+    height: 100%;
+    width: 100%;
+  }
+  width: 369px;
+  background: #363841;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  transform: translateX(-36px) translateY(8px);
+  .hover {
+    background: none !important;
+  }
+  .el-select-dropdown__item {
+    width: calc(100% - 110px);
+    margin: 8px auto;
+    font-family: PingFangSC-Regular, cursive;
+    font-size: 14px;
+    color: #c2c7d2;
+    font-weight: 400;
+  }
+  .selected {
+    color: #c2c7d2 !important;
+  }
+  .option-box {
+    height: 100%;
+    width: 100%;
+    .el-radio {
+      font-family: PingFangSC-Regular, cursive;
+      margin-right: 0;
+      margin-bottom: 16px;
+      width: 33%;
+      flex-shrink: 0;
+      --el-radio-font-size: 14px;
+      --el-radio-input-border-color-hover: var(--aux-color);
+      --el-radio-input-bg-color: #00000000;
+      --el-radio-input-height: 18px;
+      --el-radio-input-width: 18px;
+      --el-radio-text-color: #c2c7d2;
+      .is-checked {
+        .el-radio__inner {
+          border-color: var(--aux-color);
+          background: #363841;
+        }
+        .el-radio__inner::after {
+          height: 10px;
+          width: 10px;
+          background-color: var(--aux-color);
+        }
+      }
+      .el-radio__input.is-checked + .el-radio__label {
+        color: #c2c7d2;
+      }
+    }
+  }
+  .el-select-dropdown__wrap {
+    max-height: 500px;
+  }
+  .select-title {
+    width: calc(100% - 110px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0 8px;
+    margin: 0 0 8px 66px;
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  .select-footer {
+    display: flex;
+    width: calc(100% - 120px);
+    margin: 0 auto;
+    padding: 8px 0 24px;
+    justify-content: space-between;
+    & > div {
+      background: var(--aux-color);
+      border-radius: 4px;
+      width: 112px;
+      height: 38px;
+      line-height: 38px;
+      font-family: PingFangSC-Regular, cursive;
+      font-size: 14px;
+      color: #ffffff;
+      font-weight: 400;
+      text-align: center;
+      cursor: pointer;
+      &:nth-child(2) {
+        background: none;
+      }
+    }
+  }
+  .refresh-icon {
+    cursor: pointer;
+  }
+  .loading {
+    animation: load 1s ease-in-out infinite;
+  }
+
+  @keyframes load {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
+}
+
+.copy-message {
+  background: #00000060 !important;
+  backdrop-filter: blur(10px);
+  border: none !important;
+  border-radius: 16px !important;
+  font-size: 16px !important;
+  color: #fff !important;
+  padding: 64px !important;
+  transform: translateY(40vh) !important;
+  .el-message__icon {
+    display: none !important;
+  }
+  .el-message__content {
+    color: #fff !important;
+  }
+}
+
+.letter-message {
+  --el-messagebox-border-radius: 8px !important;
+  --el-messagebox-width: 488px !important;
+  background: #363841 !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  --el-messagebox-content-color: #c2c7d2 !important;
+  --el-messagebox-content-font-size: 16px !important;
+  --el-messagebox-title-color: #fff !important;
+  .el-message-box__header {
+    margin-top: 36px;
+    .el-message-box__title {
+      font-weight: 600;
+    }
+  }
+  .el-message-box__message {
+    margin: 24px auto;
+  }
+  .el-message-box__btns {
+    margin-bottom: 36px;
+    flex-direction: row-reverse;
+    .el-button {
+      color: #fff;
+      height: 38px;
+      width: 155px;
+      border: none;
+    }
+  }
+  .letter-cancel {
+    background: none;
+    &:hover {
+      background: none;
+    }
+  }
+  .letter-confirm {
+    background: var(--aux-color) !important;
+    &:hover {
+      background: var(--aux-color);
+    }
+  }
+}
+
+.lang-dropdown {
+  --el-dropdown-menuItem-hover-fill: var(--component-pop-ups-bg) !important;
+  --el-dropdown-menuItem-hover-color: #fff !important;
+  top: 88px !important;
+  border: 1px solid #ffffff20 !important;
+  border-radius: 8px !important;
+  background: var(--component-pop-ups-bg) !important;
+  .el-dropdown-menu {
+    background: var(--component-pop-ups-bg);
+    border-radius: 8px;
+    padding: 28px;
+    .is-disabled {
+      .lang-name {
+        color: var(--aux-color);
+      }
+    }
+  }
+  .el-popper__arrow {
+    display: none;
+  }
+  .lang-dropdown-item {
+    display: flex;
+    align-items: center;
+    width: 140px;
+    color: #fff;
+    * {
+      flex-shrink: 0;
+    }
+    .lang-name {
+      flex-grow: 1;
+      padding: 0 16px;
+    }
+  }
+}
+
+.board-tooltipOver {
+  & > span {
+    & > span:nth-child(1) {
+      margin-left: 12px;
+      & > span:nth-child(2) {
+        margin: 0 5px;
+        color: var(--aux-color);
+      }
+    }
+  }
+}
+.cart-tooltipOver {
+  max-width: 136px;
+}
+
+.popper-tooltip {
+  background: #000 !important;
+  color: var(--aux-color) !important;
+  border: none !important;
+  .el-popper__arrow {
+    display: none;
+  }
+  &:before {
+    display: none;
+  }
+  &:after {
+    display: none;
+  }
+}
